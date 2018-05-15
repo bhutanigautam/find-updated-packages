@@ -1,6 +1,6 @@
 {
   "name": "lib-parent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lib-child": "^1.0.0"
+    "lib-child": "^1.0.1"
   }
 }
