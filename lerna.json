@@ -5,5 +5,5 @@
     "packages/lib/lib-parent",
     "packages/web/coreweb"
   ],
-  "version": "1.0.1"
+  "version": "1.0.3"
 }

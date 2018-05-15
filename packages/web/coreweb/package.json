@@ -1,6 +1,6 @@
 {
   "name": "coreweb",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
   "private": true,
   "deployable": true,
   "dependencies": {
-    "lib-child": "^1.0.1",
-    "lib-parent": "^1.0.1"
+    "lib-child": "^1.0.3",
+    "lib-parent": "^1.0.3"
   }
 }
