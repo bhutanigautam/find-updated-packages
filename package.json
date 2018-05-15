@@ -1,5 +1,8 @@
 {
 	"devDependencies": {
 		"lerna": "^2.11.0"
+	},
+	"dependencies": {
+		"@lerna/child-process": "^3.0.0-beta.21"
 	}
 }
