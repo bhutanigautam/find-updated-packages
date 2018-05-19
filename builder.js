@@ -34,12 +34,18 @@ var lastTag = childProcess.execSync("git", ["describe", "--abbrev=0"]);
 // Get changes since last tag
 var changedFiles = childProcess.execSync("git", ["diff", "--name-only", lastTag]).split("\n");
 
+// Get the additional scope if specified
+var lastCommitMessage = childProcess.execSync("git", ["log", "-1", "--pretty=%B"]);
+// lastCommitMessage = "@scope=coreweb,wds-react";
+var additionalScope = lastCommitMessage.split("@scope=")[1] || "";
+additionalScope = additionalScope.split(",");
+
 // Create a list of updated packages
 var updatedPackages = [];
 
 changedFiles.forEach(file => {
   projectPackageList.forEach((package) => {
-    if (file.startsWith(`${package.path}/`)) {
+    if (file.startsWith(`${package.path}/`) || additionalScope.includes(package.name)) {
       updatedPackages.push(package);
     }
   })
